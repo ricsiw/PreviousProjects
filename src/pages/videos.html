@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - Wildlife Telemetry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+    
+    <!-- Header -->
+    <header class="bg-slate-900 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+            <a href="../index.html" class="text-xl font-bold tracking-tight hover:text-blue-400 transition mb-4 md:mb-0">Wildlife Telemetry</a>
+            <nav class="flex flex-wrap justify-center space-x-4 md:space-x-6">
+                <a href="../index.html" class="hover:text-blue-400 transition">Home</a>
+                <a href="pictures.html" class="hover:text-blue-400 transition">Pictures</a>
+                <a href="pdfs.html" class="hover:text-blue-400 transition">PDFs</a>
+                <a href="videos.html" class="text-blue-400 font-semibold">Videos</a>
+                <a href="presentations.html" class="hover:text-blue-400 transition">Presentations</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 min-h-[60vh]">
+        <h1 class="text-4xl font-bold mb-12 text-center text-slate-900">Video Showcase</h1>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Video 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="relative pb-[56.25%] h-0 bg-black">
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/zxYSmOf5H-I" title="Állatok mozgása videó" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Állatok mozgása videó</h3>
+                    <p class="text-slate-600">Demonstration of animal movement tracking.</p>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                <div class="relative pb-[56.25%] h-0 bg-black">
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/tvef4QQlyWs" title="Automatizált rádiótelemetriás rendszer videó" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Automatizált rádiótelemetriás rendszer videó</h3>
+                    <p class="text-slate-600">Overview of the automated radio telemetry system.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-500 py-8 text-center border-t border-slate-800">
+        <p>&copy; 2025 Wildlife Telemetry Solutions. All rights reserved.</p>
+    </footer>
+</body>
+</html>

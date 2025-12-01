@@ -1,0 +1,17 @@
+{
+  "name": "company-showcase",
+  "version": "1.0.0",
+  "description": "A static website to showcase the company's work, including pictures, PDFs, videos, and presentations.",
+  "main": "src/index.html",
+  "scripts": {
+    "build": "tailwindcss build src/css/input.css -o src/css/output.css",
+    "watch": "tailwindcss build src/css/input.css -o src/css/output.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.2.19"
+  },
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
