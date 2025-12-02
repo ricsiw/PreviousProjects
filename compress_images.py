@@ -1,5 +1,5 @@
 import os
-from PIL import Image
+from PIL import Image, ImageOps
 
 def compress_images(directory):
     # Supported extensions to look for
@@ -12,14 +12,23 @@ def compress_images(directory):
             
             if file_ext in extensions:
                 try:
-                    # Check file size (700 KB = 700 * 1024 bytes)
+                    # Check file size
                     file_size = os.path.getsize(file_path)
-                    target_quality = 85
                     
+                    # If it's already a small JPG, skip it
+                    if file_ext.lower() in ['.jpg', '.jpeg'] and file_size <= 700 * 1024:
+                        print(f"Skipping small file: {file}")
+                        continue
+
                     with Image.open(file_path) as img:
+                        # Fix orientation based on EXIF data (prevents unexpected rotation)
+                        img = ImageOps.exif_transpose(img)
+
                         # Convert to RGB if necessary (e.g. for PNGs with transparency)
                         if img.mode in ('RGBA', 'P'):
                             img = img.convert('RGB')
+                        
+                        target_quality = 85
                         
                         # If file is larger than 700KB, apply more aggressive compression
                         if file_size > 700 * 1024:
